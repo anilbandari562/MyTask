@@ -1,0 +1,23 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    background-color:blueviolet;
+    display: flex;
+}
+.left{
+    width: 20%;
+    height: 100%;
+    background-color: green;
+    text-align: center;
+    line-height: 80px;
+}
+.right{
+    width: 80%;
+    height: 100%;
+    background-color:blue;
+
+}
+button{
+    width: 80%;
+    height: 5%;
+}
