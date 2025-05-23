@@ -1,0 +1,15 @@
+<div class="parent">
+<div class="card" style="width: 275px; height: 400px;" *ngFor="let card of flipkart">
+    <div class="img"> <img src={{card.image}} class="card-img-top" alt="image">
+        
+    
+    <div class="card-body" style="height: 25px;">
+        <h6 class="card-title">{{card.tittle}}</h6>
+        <h6 class="category">category: {{card.category}}</h6>
+        <h6 class="price">price: {{card.price}}</h6>
+        <span class="rating">*{{card.rating.rate}}</span>
+
+    </div>
+</div>
+</div>
+

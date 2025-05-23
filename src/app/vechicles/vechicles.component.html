@@ -1,0 +1,57 @@
+
+<input type="text" placeholder="enter text to search" [(ngModel)]="keywords" (keyup)="search()">
+
+<select [(ngModel)]="column">
+    <option value="Vechicle">Vechicle Name</option>
+    <option value="color">color</option>
+    <option value="cost">Cost</option>
+    <option value="fuel">fuel</option>
+</select>
+
+<select [(ngModel)]="order">
+    <option value="asc">Asending Order</option>
+    <option value="desc">Desending Order</option>
+</select>
+
+<button (click)="sort()">sort</button>
+
+<!-----------pagination-->
+
+<select [(ngModel)]="limit">
+    <option value="10">10</option>
+    <option value="20">20</option>
+    <option value="30">30</option>
+    <option value="40">40</option>
+</select>
+
+<select [(ngModel)]="page">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+</select>
+
+<button (click)="pagination()">pagination</button>
+
+<table class="table table-dark">
+<thead>
+    <tr>
+        
+        <th>vechicles</th>
+        <th>color</th>
+        <th>cost</th>
+        <th>fuel</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let vechicle of vechicles;let i=index">
+        <td>{{vechicle.Vehicle}}</td>
+        <td>{{vechicle.color}}</td>
+        <td>{{vechicle.cost}}</td>
+        <td>{{vechicle.fuel}}</td>
+        <td><button class="btn btn-danger"
+            (click)="delete(vechicle.id)">Delete</button></td>
+
+    </tr>
+</tbody>
+</table>

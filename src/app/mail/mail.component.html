@@ -1,0 +1,10 @@
+<ol>
+    <li *ngFor="let item of mails" [ngClass]="{'grey':item.completed==false,'black':item==true}">
+        {{item.title}}
+
+    </li>
+</ol>
+
+
+
+

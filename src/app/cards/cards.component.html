@@ -1,0 +1,24 @@
+<div class="parent">
+<div class="card." style="width: 275px; height: 300px;" *ngFor="let card of cards">
+            <h3>{{card.school_name}}</h3>
+    <div class="img"> <img src={{card.profile_picture}} class="card-img-top" alt="card image">
+        
+    <div class="body">
+        <div class="left"></div>
+
+        <h5>{{card.name}}</h5>
+        <h5>{{card.phone}}</h5>
+        <h5>{{card.city}}</h5>
+        <h5>{{card.dob}}</h5>
+        <h5>{{card.email}}</h5>
+        <h5>{{card.school_city}}</h5>
+        <h5>{{card.school_pin}}</h5>
+        <h5>{{card.id}}</h5>
+        
+        <div class="right"></div>
+        <h6 class="card-title">{{card.tittle}}</h6>
+       
+    </div>
+</div>
+</div>
+

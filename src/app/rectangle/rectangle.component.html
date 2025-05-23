@@ -2,14 +2,15 @@
     <div class="Calculator">
         <br>
         <label><h3>Length:</h3></label>
-        <input type="number"><br><br>
+        <input type="number" [(ngModel)]="Length"><br><br>
         <label ><h3>Breadth:</h3></label>
-        <input type="number"><br><br>
+        <input type="number" [(ngModel)]="Breadth"><br><br>
 
-        <button>Area</button><br><br>
-        <button>Perimeter</button><br><br>
+        <button (click)="calculate()"[disabled]="(Length==0)||(Breadth==0)">
+            Area</button><br><br>
+        <button (click)="calculate()"[disabled]="(Length==0)||(Breadth==0)">Perimeter</button><br><br>
 
         
-        <h2>Result</h2>
+        <h2>Result:{{sum}}</h2>
     </div>
 </div>
